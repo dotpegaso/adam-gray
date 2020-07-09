@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true,
+      "generators": true,
+      "destructuring": true,
+      "spread": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "jsx-a11y/accessible-emoji": 0,
+    "no-nested-ternary": 0,
+    "no-unused-expressions": 0,
+    "react/jsx-curly-newline": 0,
+    "global-require": 0,
+    "react/destructuring-assignment": [
+      0,
+      {
+        "ignoreClassFields": false
+      }
+    ],
+    "prettier/prettier": 0,
+    "semi": [
+      2,
+      "never"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}
