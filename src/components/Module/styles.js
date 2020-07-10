@@ -1,10 +1,23 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
 
-export const Container = styled.section`
-  
+const animation = css`
+  opacity: 0;
+  animation: fadeIn .3s ease forwards;
+  animation-delay: 1.5s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `
+
+export const Container = styled.section``
 
 export const Content = styled.div`
   display: flex;
@@ -39,7 +52,7 @@ export const Description = styled.p`
 
 export const Icon = styled.img`
   margin-bottom: 20px;
-  max-height: 150px;
+  height: 100px;
 
   ${media.lessThan('small')`
     width: 40%
@@ -70,7 +83,53 @@ export const Display = styled.div`
   `}
 `
 
-export const DisplayImage = styled.img`
+export const AnimationWrapper = styled.div`
   height: 70%;
   max-width: 75%;
+  ${animation}
+`
+
+export const DisplayImage = styled.img`
+  height: 100%;
+  ${props => props.hotfix !== 'BICYCLE BOLTS' && `width: 100%;`}
+
+  ${props => props.animate && (`
+    opacity: 0;
+    transform: translateY(20px);
+    animation: float 4s ease infinite;
+    transition: .2s all;
+    object-fit: cover;
+
+    @keyframes float {
+      0%{
+        opacity: 1;
+        transform: translateY(20px)
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0)
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(20px)
+      }
+    }
+  `)}
+`
+
+export const LottieWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+
+  ${animation}
+`
+
+export const ThreeJSWrapper = styled.div`
+  position: absolute;
+  pointer-events: none;
+  height: fit-content;
+  z-index: 0;
+
+  ${animation}
 `

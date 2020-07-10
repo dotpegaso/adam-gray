@@ -1,6 +1,8 @@
 import React from 'react'
+import Lottie from "react-lottie"
 import Button from '../Button'
 import Title from '../Title'
+import ThreeModel from '../ThreeModel'
 import {
   Container,
   Content,
@@ -9,10 +11,15 @@ import {
   Icon,
   Display,
   DisplayImage,
+  LottieWrapper,
+  ThreeJSWrapper,
+  AnimationWrapper,
 } from './styles'
 
 const Module = ({
   id,
+  lottieIcon,
+  threeModelIcon,
   title,
   titleBackground,
   titleColor,
@@ -26,35 +33,71 @@ const Module = ({
   actionShadowColor,
   displayBackground,
   displayImage,
-}) => (
-  <Container id={id} className="section">
-    <Content>
+  animate,
+}) => {
 
-      <Details>
-        <Title
-          titleBackground={titleBackground}
-          titleColor={titleColor}
-          title={title}
-        />
+  const lottieDefaultOptions = {
+    autoplay: true,
+    animationData: lottieIcon,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    }
+  }
 
-        <Description descriptionColor={descriptionColor}>{description}</Description>
+  return (
+    <Container id={id} className="section">
+      <Content>
 
-        {icon && <Icon src={icon} alt={title} />}
+        <Details>
+          <Title
+            titleBackground={titleBackground}
+            titleColor={titleColor}
+            title={title}
+          />
 
-        <Button
-          actionLink={actionLink}
-          actionBorderColor={actionBorderColor}
-          actionColor={actionColor}
-          actionText={actionText}
-          actionShadowColor={actionShadowColor}
-        />
-      </Details>
+          <Description descriptionColor={descriptionColor}>{description}</Description>
 
-      <Display style={{ backgroundImage: `url(${displayBackground})` }}>
-        {displayImage && <DisplayImage src={displayImage} alt="display" />}
-      </Display>
+          {icon && <Icon src={icon} alt={title} />}
 
-    </Content>
-  </Container>
-)
+          <Button
+            actionLink={actionLink}
+            actionBorderColor={actionBorderColor}
+            actionColor={actionColor}
+            actionText={actionText}
+            actionShadowColor={actionShadowColor}
+          />
+        </Details>
+
+        <Display style={{ backgroundImage: `url(${displayBackground})` }}>
+          {displayImage && (
+            <AnimationWrapper>
+              <DisplayImage
+                src={displayImage}
+                alt="display"
+                animate={animate}
+                hotfix={title}
+              />
+            </AnimationWrapper>
+          )}
+          {lottieIcon && (
+            <LottieWrapper>
+              <Lottie options={lottieDefaultOptions} />
+            </LottieWrapper>
+          )}
+          {threeModelIcon && (
+            <ThreeJSWrapper>
+              <ThreeModel
+                id="three-js-model"
+                model={threeModelIcon}
+                width={window.innerWidth}
+                height="650"
+              />
+            </ThreeJSWrapper>
+          )}
+        </Display>
+
+      </Content>
+    </Container>
+  )
+}
 export default Module

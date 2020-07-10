@@ -20,7 +20,7 @@ const ProductSurfBrain = () => (
   <Product
     title="SURF BRAIN"
     titleBackground={IMAGES.TITLE_BG_SURF_BRAIN}
-    titleColor={COLORS.SURF_PRIMARY}
+    titleColor={COLORS.SURF_SECONDARY}
     description="My name is Adam Gray and I grew up spending summers surfing and kayaking in Stinson and Bolinas CA. I’m the middle child of 3 red headed brothers and got my my first boogie when I was 4.   I’ve been wiping out and getting sunburned ever since. Sadly I’m not the most talented surfer. I don’t like the feel or look of a full helmet. So I decided to make something in between no protection and reasonable protection that looks like a hat."
     descriptionColor={COLORS.SURF_PRIMARY}
     icon={IMAGES.ICON_SURF_BRAIN}

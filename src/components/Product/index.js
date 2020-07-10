@@ -95,7 +95,7 @@ const Product = ({
         <ProductsContainer>
           <ProductsTitle
             color={titleColor}
-            backgroundColor={videoBackground}
+            backgroundColor={actionShadowColor}
           >
             Products
           </ProductsTitle>

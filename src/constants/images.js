@@ -28,8 +28,9 @@ export default {
   TITLE_BG_INTRMODL: require('../resources/images/titlebg_intrmodl.svg'),
 
   // module display images
-  DISPLAY_IMG_HELLA_SLINGSHOTS: require('../resources/images/displayimg_hella_slingshots.svg'),
-  // DISPLAY_IMG_BICYCLE_BOLTS: require('../resources/images/displayimg_bicycle_bolts.svg'),
+  DISPLAY_IMG_BICYCLE_BOLTS: require('../resources/images/displayimg_bicycle_bolts.svg'),
+  DISPLAY_IMG_SURF_BRAIN: require('../resources/images/displayimg_surf_brain.svg'),
+  DISPLAY_IMG_INTRMODL: require('../resources/images/displayimg_intrmodl.svg'),
 
   // module display backgrounds
   DISPLAY_BG_HELLA_SLINGSHOTS: require('../resources/images/displaybg_hella_slignshots.svg'),
@@ -44,4 +45,11 @@ export default {
   PRODUCT_BG_SURF_BRAIN: require('../resources/images/product_bg_surf_brain.svg'),
   PRODUCT_BG_HELLA_MORE_FUNNER: require('../resources/images/product_bg_hella_more_funner.svg'),
   PRODUCT_BG_INTRMODL: require('../resources/images/product_bg_intrmodl.svg'),
+
+  // lottie
+  LOTTIE_HELLA_MORE_FUNNER: require('../resources/lottie/hella_more_funner.json'),
+  LOTTIE_INTRMODL: require('../resources/lottie/intrmodl.json'),
+
+  // threeJS
+  THREE_HELLA_SLINGSHOTS: require('../resources/three/hella_slingshots.fbx'),
 }

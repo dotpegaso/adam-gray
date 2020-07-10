@@ -1,6 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
+
+const animation = css`
+  @keyframes showsUp {
+    0% {
+      opacity: 0;
+      transform: translateY(45px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`
 
 export const Intro = styled.div`
   display: flex;
@@ -43,11 +56,17 @@ export const Title = styled.h1`
   color: ${COLORS.SECONDARY_TEXT};
   margin: 0;
   line-height: 5vw;
+  animation: showsUp .2s ease forwards;
+  animation-delay: .8s;
+  opacity: 0;
+  transition: .2s all;
 
   ${media.lessThan("small")`
     font-size: 15vw;
     margin-bottom: 20px;
   `}
+
+  ${animation}
 `
 
 export const FirstLine = styled.p`
@@ -57,10 +76,16 @@ export const FirstLine = styled.p`
   padding-left: 12px;
   margin-top: 10px;
   font-size: 22px;
+  animation: showsUp .2s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  transition: .2s all;
 
   ${media.lessThan("small")`
     padding: 0;
   `}
+
+  ${animation}
 `
 
 export const SecondLine = styled.p`
@@ -69,8 +94,14 @@ export const SecondLine = styled.p`
   padding-left: 12px;
   color: ${COLORS.SECONDARY_TEXT};
   font-size: 22px;
+  animation: showsUp .2s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+  transition: .2s all;
 
   ${media.lessThan("small")`
     padding: 0;
   `}
+
+  ${animation}
 `

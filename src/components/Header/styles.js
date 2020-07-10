@@ -36,3 +36,7 @@ export const SocialIcon = styled.img`
   width: 25px;
   margin-right: 40px;
 `
+
+export const BackToHome = styled(Link)`
+  height: 95%;
+`

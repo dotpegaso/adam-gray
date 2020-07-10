@@ -94,6 +94,7 @@ export const NavigationIcon = styled.img`
 
 export const Photo = styled.img`
   width: 35%;
+  height: 100%;
   object-fit: cover;
 
   ${media.lessThan('small')`

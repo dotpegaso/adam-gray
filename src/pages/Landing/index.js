@@ -7,7 +7,6 @@ import {
 } from '../../components'
 import {
   Intro,
-  // Image,
   Content,
   Wrapper,
   Title,
@@ -19,10 +18,11 @@ import COLORS from '../../constants/colors'
 
 const Landing = () => {
   const [activeHeader, setActiveHeader] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const handleScroll = ({index}) => {
-    // console.log('e', a,b)
+  const handleScroll = ({ index }) => {
     index > 0 ? setActiveHeader(true) : setActiveHeader(false)
+    setCurrentIndex(index)
   }
 
   return (
@@ -35,7 +35,6 @@ const Landing = () => {
             <Intro className="section" state={state} fullpageApi={fullpageApi}>
               <Content>
                 <AnimatedLogo />
-                {/* <Image src={IMAGES.LOGO} alt="Logo" /> */}
                 <Wrapper>
                   <Title>Welcome</Title>
                   <FirstLine>TO ADAM'S GRAY</FirstLine>
@@ -57,7 +56,7 @@ const Landing = () => {
               actionColor={COLORS.HELLA_PRIMARY}
               actionShadowColor={COLORS.SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_SLINGSHOTS}
-              // displayImage={IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
+              threeModelIcon={currentIndex === 1 && IMAGES.THREE_HELLA_SLINGSHOTS}
             />
             <Module
               id="bicycle-bolts"
@@ -73,13 +72,14 @@ const Landing = () => {
               actionColor={COLORS.BICYCLE_PRIMARY}
               actionShadowColor={COLORS.BICYCLE_SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_BICYCLE_BOLTS}
-              // displayImage={IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
+              displayImage={currentIndex === 2 && IMAGES.DISPLAY_IMG_BICYCLE_BOLTS}
+              animate
             />
             <Module
               id="surf-brain"
               title="SURF BRAIN"
               titleBackground={IMAGES.TITLE_BG_SURF_BRAIN}
-              titleColor={COLORS.SURF_PRIMARY}
+              titleColor={COLORS.SURF_SECONDARY}
               description="In this project i make a bump cap to protect your head while surfing."
               descriptionColor={COLORS.SURF_PRIMARY}
               icon={IMAGES.ICON_SURF_BRAIN}
@@ -89,7 +89,8 @@ const Landing = () => {
               actionColor={COLORS.SURF_SECONDARY}
               actionShadowColor={COLORS.SURF_SUPPORT}
               displayBackground={IMAGES.DISPLAY_BG_SURF_BRAIN}
-              // displayImage={IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
+              displayImage={currentIndex === 3 && IMAGES.DISPLAY_IMG_SURF_BRAIN}
+              animate
             />
             <Module
               id="hella-more-funner"
@@ -105,7 +106,7 @@ const Landing = () => {
               actionColor={COLORS.HELLA_FUNNER_SECONDARY}
               actionShadowColor={COLORS.HELLA_FUNNER_SUPPORT}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_MORE_FUNNER}
-              // displayImage={IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
+              lottieIcon={currentIndex === 4 && IMAGES.LOTTIE_HELLA_MORE_FUNNER}
             />
             <Module
               id="intrmodl"
@@ -121,7 +122,8 @@ const Landing = () => {
               actionColor={COLORS.INTRMODL_PRIMARY}
               actionShadowColor={COLORS.INTRMODL_SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_INTRMODL}
-              // displayImage={IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
+              displayImage={currentIndex === 5 && IMAGES.DISPLAY_IMG_INTRMODL}
+              animate
             />
           </ReactFullpage.Wrapper>
         )}
