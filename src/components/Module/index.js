@@ -13,7 +13,6 @@ import {
   DisplayImage,
   LottieWrapper,
   ThreeJSWrapper,
-  AnimationWrapper,
 } from './styles'
 
 const Module = ({
@@ -70,14 +69,11 @@ const Module = ({
 
         <Display style={{ backgroundImage: `url(${displayBackground})` }}>
           {displayImage && (
-            <AnimationWrapper>
-              <DisplayImage
-                src={displayImage}
-                alt="display"
-                animate={animate}
-                hotfix={title}
-              />
-            </AnimationWrapper>
+            <DisplayImage
+              src={displayImage}
+              alt="display"
+              animate={animate}
+            />
           )}
           {lottieIcon && (
             <LottieWrapper>

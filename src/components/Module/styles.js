@@ -83,15 +83,10 @@ export const Display = styled.div`
   `}
 `
 
-export const AnimationWrapper = styled.div`
+export const DisplayImage = styled.img`
   height: 70%;
   max-width: 75%;
-  ${animation}
-`
-
-export const DisplayImage = styled.img`
-  height: 100%;
-  ${props => props.hotfix !== 'BICYCLE BOLTS' && `width: 100%;`}
+  object-fit: contain;
 
   ${props => props.animate && (`
     opacity: 0;
