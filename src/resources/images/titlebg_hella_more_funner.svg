@@ -1,4 +1,1 @@
-<svg id="Component_5_1" data-name="Component 5 – 1" xmlns="http://www.w3.org/2000/svg" width="549.794" height="65.998" viewBox="0 0 549.794 65.998">
-  <rect id="Rectangle_400" data-name="Rectangle 400" width="539" height="50" fill="#f26941"/>
-  <path id="Path_2940" data-name="Path 2940" d="M-4574.138-16252.98h137.282v-31" transform="translate(4976.65 16308.979)" fill="none" stroke="#6140ff" stroke-width="20"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="549.794" height="65.998" data-name="Component 5 – 1"><path fill="#f26941" d="M0 0h539v50H0z" data-name="Rectangle 400"/><path fill="none" stroke="#6140ff" stroke-width="20" d="M402.51 56H539.8V25" data-name="Path 2940"/></svg>

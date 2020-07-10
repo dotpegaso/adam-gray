@@ -1,7 +1,7 @@
 export default {
   LOGO: require('../resources/images/logo.svg'),
   TINY_LOGO: require('../resources/images/tiny_logo.svg'),
-  ADAM_PHOTO: require('../resources/images/adam_photo.svg'),
+  ADAM_PHOTO: require('../resources/images/adam_photo.jpg'),
   ABOUT_BACKGROUND: require('../resources/images/about_bg.svg'),
   MOCK_CAROUSEL: require('../resources/images/mock_image_carousel.svg'),
   MOCK_PRODUCT: require('../resources/images/mock_product.svg'),
