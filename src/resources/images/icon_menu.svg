@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75.607" height="69.744" viewBox="0 0 75.607 69.744">
+  <defs>
+    <filter id="Rectangle_164" x="0" y="0" width="75.607" height="69.744" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#0f245d" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_8_1" data-name="Component 8 – 1" transform="translate(8 3)">
+    <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(4 4)">
+      <g transform="matrix(1, 0, 0, 1, -12, -7)" filter="url(#Rectangle_164)">
+        <rect id="Rectangle_164-2" data-name="Rectangle 164" width="51.607" height="45.743" transform="translate(12 7)" fill="#fff"/>
+      </g>
+      <line id="Line_43" data-name="Line 43" x2="23.458" transform="translate(14.368 22.58)" fill="none" stroke="#6c5ce6" stroke-width="4"/>
+      <line id="Line_45" data-name="Line 45" x2="23.458" transform="translate(14.368 13.994)" fill="none" stroke="#6c5ce6" stroke-width="4"/>
+      <line id="Line_44" data-name="Line 44" x2="23.458" transform="translate(14.368 31.377)" fill="none" stroke="#6c5ce6" stroke-width="4"/>
+    </g>
+    <g id="Rectangle_400" data-name="Rectangle 400" fill="none" stroke="#6c5ce6" stroke-width="5">
+      <rect width="60" height="54" stroke="none"/>
+      <rect x="2.5" y="2.5" width="55" height="49" fill="none"/>
+    </g>
+  </g>
+</svg>

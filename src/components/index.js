@@ -5,6 +5,7 @@ import Button from './Button'
 import Title from './Title'
 import Product from './Product'
 import Footer from './Footer'
+import Menu from './Menu'
 
 export {
   Module,
@@ -14,4 +15,5 @@ export {
   Title,
   Product,
   Footer,
+  Menu,
 }

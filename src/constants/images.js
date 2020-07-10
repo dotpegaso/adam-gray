@@ -11,7 +11,7 @@ export default {
   EMAIL: require('../resources/images/icon_mail.svg'),
   URANUS: require('../resources/images/uranus.svg'),
   PLAY: require('../resources/images/icon_play.svg'),
-  ARROW_BACK: require('../resources/images/icon_arrow_back.svg'),
+  ARROW: require('../resources/images/icon_arrow.svg'),
 
   // module icons
   ICON_HELLA_SLINGSHOTS: require('../resources/images/icon_hella_slingshots.svg'),
@@ -19,6 +19,8 @@ export default {
   ICON_SURF_BRAIN: require('../resources/images/icon_surfbrain.svg'),
   ICON_HELLA_MORE_FUNNER: require('../resources/images/icon_hella_more_funner.svg'),
   ICON_INTRMODL: require('../resources/images/icon_intrmodl.svg'),
+  ICON_CLOSE: require('../resources/images/icon_close.svg'),
+  ICON_MENU: require('../resources/images/icon_menu.svg'),
 
   // module title backgrounds
   TITLE_BG_HELLA_SLINGSHOTS: require('../resources/images/titlebg_hella_slingshot.svg'),

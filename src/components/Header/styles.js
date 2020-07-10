@@ -32,11 +32,25 @@ export const Logo = styled.img`
 `
 
 export const SocialIcon = styled.img`
-  height: 25px;
-  width: 25px;
-  margin-right: 40px;
+  height: 35px;
+  width: 45px;
+  margin-right: 30px;
+  object-fit: contain;
 `
 
 export const BackToHome = styled(Link)`
   height: 95%;
 `
+
+export const MenuIcon = styled.img`
+  display: block;
+  width: 50px;
+  height: fit-content;
+  object-fit: contain;
+  margin-top: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+

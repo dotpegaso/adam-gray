@@ -29,7 +29,7 @@ const About = () => (
       <Content>
         <Navigation>
           <NavigationIconWrapper to="/">
-            <NavigationIcon src={IMAGES.ARROW_BACK} alt="Arrow back" />
+            <NavigationIcon src={IMAGES.ARROW} alt="Arrow back" />
           </NavigationIconWrapper>
           <Text>BACK</Text>
         </Navigation>
