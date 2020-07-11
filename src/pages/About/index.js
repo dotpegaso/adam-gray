@@ -21,6 +21,7 @@ import {
   Details,
 } from './styles'
 import IMAGES from '../../constants/images'
+import COLORS from '../../constants/colors'
 
 const About = () => (
   <Container>
@@ -57,7 +58,10 @@ const About = () => (
 
       <Photo src={IMAGES.ADAM_PHOTO} alt="Adam Gray" />
     </Wrapper>
-    <Footer />
+    <Footer
+      backgroundColor={COLORS.PRIMARY}
+      iconBackgroundColor={COLORS.SECONDARY}
+    />
   </Container>
 )
 

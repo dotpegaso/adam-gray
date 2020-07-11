@@ -1,6 +1,6 @@
 export default {
   PRIMARY: '#6140FF',
-  SECONDARY: 'tan',
+  SECONDARY: '#30F2D4',
   LIGHTER: '#FFF',
   MODULE_BACKGROUND: '#FFF',
   ABOUT_PRIMARY: '#253752',

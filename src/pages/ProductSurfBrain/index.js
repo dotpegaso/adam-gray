@@ -44,6 +44,8 @@ const ProductSurfBrain = () => (
     biggerActionTextColor={COLORS.SURF_PRIMARY}
     biggerActionBackground={COLORS.SURF_SECONDARY}
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_SURF_BRAIN}
+    footerBackground={COLORS.SURF_PRIMARY}
+    footerIconBackground={COLORS.SURF_SECONDARY}
   />
 )
 

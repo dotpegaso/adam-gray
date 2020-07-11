@@ -12,6 +12,8 @@ import {
   Title,
   FirstLine,
   SecondLine,
+  StartControl,
+  Arrow,
 } from './styles'
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
@@ -26,13 +28,13 @@ const Landing = () => {
   }
 
   return (
-    <section style={{  height: '100vh'}}>
+    <>
       <Header active={activeHeader} />
       <ReactFullpage
         afterLoad={(origin, destination) => handleScroll(destination)}
-        render={({ state, fullpageApi }) => (
+        render={({ fullpageApi }) => (
           <ReactFullpage.Wrapper>
-            <Intro className="section" state={state} fullpageApi={fullpageApi}>
+            <Intro className="section">
               <Content>
                 <AnimatedLogo />
                 <Wrapper>
@@ -41,6 +43,10 @@ const Landing = () => {
                   <SecondLine>WEBSITE</SecondLine>
                 </Wrapper>
               </Content>
+              <StartControl onClick={() => fullpageApi.moveSectionDown()}>
+                <SecondLine>START</SecondLine>
+                <Arrow src={IMAGES.ARROW} alt="Arrow" />
+              </StartControl>
             </Intro>
             <Module
               id="hella-slingshots"
@@ -57,6 +63,9 @@ const Landing = () => {
               actionShadowColor={COLORS.SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_SLINGSHOTS}
               threeModelIcon={currentIndex === 1 && IMAGES.THREE_HELLA_SLINGSHOTS}
+              pageUp={() => fullpageApi.moveSectionUp()}
+              pageDown={() => fullpageApi.moveSectionDown()}
+              showControl
             />
             <Module
               id="bicycle-bolts"
@@ -73,7 +82,10 @@ const Landing = () => {
               actionShadowColor={COLORS.BICYCLE_SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_BICYCLE_BOLTS}
               displayImage={currentIndex === 2 && IMAGES.DISPLAY_IMG_BICYCLE_BOLTS}
+              pageUp={() => fullpageApi.moveSectionUp()}
+              pageDown={() => fullpageApi.moveSectionDown()}
               animate
+              showControl
             />
             <Module
               id="surf-brain"
@@ -90,7 +102,10 @@ const Landing = () => {
               actionShadowColor={COLORS.SURF_SUPPORT}
               displayBackground={IMAGES.DISPLAY_BG_SURF_BRAIN}
               displayImage={currentIndex === 3 && IMAGES.DISPLAY_IMG_SURF_BRAIN}
+              pageUp={() => fullpageApi.moveSectionUp()}
+              pageDown={() => fullpageApi.moveSectionDown()}
               animate
+              showControl
             />
             <Module
               id="hella-more-funner"
@@ -107,6 +122,9 @@ const Landing = () => {
               actionShadowColor={COLORS.HELLA_FUNNER_SUPPORT}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_MORE_FUNNER}
               lottieIcon={currentIndex === 4 && IMAGES.LOTTIE_HELLA_MORE_FUNNER}
+              pageUp={() => fullpageApi.moveSectionUp()}
+              pageDown={() => fullpageApi.moveSectionDown()}
+              showControl
             />
             <Module
               id="intrmodl"
@@ -123,12 +141,14 @@ const Landing = () => {
               actionShadowColor={COLORS.INTRMODL_SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_INTRMODL}
               displayImage={currentIndex === 5 && IMAGES.DISPLAY_IMG_INTRMODL}
+              pageUp={() => fullpageApi.moveSectionUp()}
               animate
+              showControl
             />
           </ReactFullpage.Wrapper>
         )}
       />
-    </section>
+    </>
   )
 }
 

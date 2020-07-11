@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import COLORS from '../../constants/colors'
 
 export const Container = styled.section`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,7 +14,7 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
-  height: calc(80% - 250px);
+  height: calc(80% - 200px);
   padding: 100px;
   margin: 0 auto;
   width: 30%;

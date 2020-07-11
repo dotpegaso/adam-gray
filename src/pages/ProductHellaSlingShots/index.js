@@ -44,6 +44,8 @@ const ProductHellaSlingShots = () => (
     biggerActionTextColor={COLORS.HELLA_SECONDARY}
     biggerActionBackground={COLORS.HELLA_PRIMARY}
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_HELLA_SLINGSHOTS}
+    footerBackground={COLORS.HELLA_PRIMARY}
+    footerIconBackground={COLORS.HELLA_SECONDARY}
   />
 )
 

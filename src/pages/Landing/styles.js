@@ -17,6 +17,7 @@ const animation = css`
 
 export const Intro = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
@@ -104,4 +105,32 @@ export const SecondLine = styled.p`
   `}
 
   ${animation}
+`
+
+export const StartControl = styled.div`
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  animation: showsUp .2s ease forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  transition: .2s all;
+
+  ${animation}
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const Arrow = styled.img`
+  padding: 10px;
+  width: 18px;
+  height: 15px;
+  background: #FFF;
+  object-fit: contain;
+  margin-left: 20px;
 `

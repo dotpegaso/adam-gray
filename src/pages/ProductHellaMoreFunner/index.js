@@ -32,6 +32,8 @@ const ProductHellaMoreFunner = () => (
     biggerActionTextColor={COLORS.HELLA_FUNNER_PRIMARY}
     biggerActionBackground={COLORS.HELLA_FUNNER_SECONDARY}
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_HELLA_MORE_FUNNER}
+    footerBackground={COLORS.HELLA_FUNNER_SECONDARY}
+    footerIconBackground={COLORS.HELLA_FUNNER_SUPPORT}
   />
 )
 

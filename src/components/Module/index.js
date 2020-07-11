@@ -3,6 +3,7 @@ import Lottie from "react-lottie"
 import Button from '../Button'
 import Title from '../Title'
 import ThreeModel from '../ThreeModel'
+import Controls from '../Controls'
 import {
   Container,
   Content,
@@ -33,6 +34,9 @@ const Module = ({
   displayBackground,
   displayImage,
   animate,
+  pageUp,
+  pageDown,
+  showControl,
 }) => {
 
   const lottieDefaultOptions = {
@@ -93,6 +97,7 @@ const Module = ({
         </Display>
 
       </Content>
+      {showControl && <Controls pageUp={pageUp} pageDown={pageDown} />}
     </Container>
   )
 }

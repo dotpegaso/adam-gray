@@ -44,6 +44,8 @@ const ProductBicycleBolts = () => (
     biggerActionTextColor={COLORS.BICYCLE_PRIMARY}
     biggerActionBackground={COLORS.BICYCLE_SUPPORT}
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_BICYLE_BOLTS}
+    footerBackground={COLORS.BICYCLE_SUPPORT}
+    footerIconBackground={COLORS.BICYCLE_PRIMARY}
   />
 )
 

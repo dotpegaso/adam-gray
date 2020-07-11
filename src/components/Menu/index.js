@@ -9,11 +9,12 @@ import {
 } from './styles'
 import Footer from '../Footer'
 import IMAGES from '../../constants/images'
+import COLORS from '../../constants/colors'
 
 const menuItems = [
   {label: 'About', url: '/about', align: 'end'},
   {label: 'Hella Slingshots', url: '/hella-slingshots', align: 'start'},
-  {label: 'Bicycle Bolt', url: '/bicycle-bolt', align: 'end'},
+  {label: 'Bicycle Bolt', url: '/bicycle-bolts', align: 'end'},
   {label: 'Surf Brain', url: '/surf-brain', align: 'start'},
   {label: 'Hella More Funner', url: '/hella-more-funner', align: 'end'},
   {label: 'Intrmodl', url: '/intrmodl', align: 'start'},
@@ -42,7 +43,11 @@ const Menu = ({ active, callback }) => (
             </StyledLink>
           ))}
         </Content>
-        <Footer />
+        <Footer
+          backgroundColor={COLORS.SECONDARY}
+          iconBackgroundColor={COLORS.PRIMARY}
+          noPadding
+        />
       </Container>
     )}
   </>

@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import COLORS from '../../constants/colors'
 
 export const Container = styled.div`
   height: 20%;
   display: flex;
   justify-content: center;
-  padding: 30px 0;
-  background-color: ${COLORS.ABOUT_SUPPORT};
+  padding: ${props => props.nopadding ? '0' : '30px 0'};
+  background-color: ${props => props.background};
 
   ${media.greaterThan('1600px')`
     padding: 0;
@@ -31,21 +30,15 @@ export const SocialWrapper = styled.a`
 `
 
 export const SocialIconWrapper = styled.div`
-  background-color: ${COLORS.ABOUT_SECONDARY};
+  background-color: ${props => props.background};
   padding: 15px;
   display: flex;
   align-items: center;
 `
 
-export const SocialIcon = styled.img`
-  height: 25px;
-  width: 25px;
-  object-fit: contain;
-`
-
 export const SocialText = styled.p`
   margin: 0;
-  color: ${COLORS.ABOUT_SECONDARY};
+  color: ${props => props.color};
   margin-left: 20px;
   font-weight: 600;
   font-size: 18px;

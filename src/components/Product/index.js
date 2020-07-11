@@ -3,6 +3,7 @@ import Module from '../Module'
 import Header from '../Header'
 import Gallery from '../Gallery'
 import Footer from '../Footer'
+import ProjectIntrmodl from '../ProjectIntrmodl'
 import {
   Container,
   VideoContainer,
@@ -44,6 +45,9 @@ const Product = ({
   biggerActionBackground,
   biggerActionBackgroundImage,
   biggerActionTextColor,
+  hasProject,
+  footerIconBackground,
+  footerBackground,
 }) => (
   <>
     <Header active />
@@ -64,6 +68,8 @@ const Product = ({
       />
       
       {carouselImages && <Gallery carouselImages={carouselImages} />}
+
+      {hasProject && <ProjectIntrmodl /> }
 
       {videoUrl && (
         <VideoContainer videoBackground={videoBackground}>
@@ -118,7 +124,10 @@ const Product = ({
         </ShadowText>
       </BiggerCallToAction>
 
-      <Footer />
+      <Footer
+        backgroundColor={footerIconBackground}
+        iconBackgroundColor={footerBackground}
+      />
     </Container>
   </>
 )

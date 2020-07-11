@@ -32,6 +32,9 @@ const ProductIntrmodl = () => (
     biggerActionTextColor={COLORS.INTRMODL_SECONDARY}
     biggerActionBackground={COLORS.INTRMODL_SUPPORT}
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_INTRMODL}
+    footerBackground={COLORS.INTRMODL_PRIMARY}
+    footerIconBackground={COLORS.INTRMODL_SECONDARY}
+    hasProject
   />
 )
 

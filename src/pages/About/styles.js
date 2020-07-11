@@ -94,8 +94,12 @@ export const NavigationIcon = styled.img`
 
 export const Photo = styled.img`
   width: 35%;
-  height: 100%;
   object-fit: cover;
+
+  // safari trick
+  &:not(:root:root) {
+    height: 100%;
+  }
 
   ${media.lessThan('small')`
     width: 100%;

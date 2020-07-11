@@ -17,7 +17,9 @@ const animation = css`
   }
 `
 
-export const Container = styled.section``
+export const Container = styled.section`
+  position: relative;
+`
 
 export const Content = styled.div`
   display: flex;

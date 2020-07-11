@@ -13,7 +13,6 @@ const Gallery = ({
     slideDuration={250}
     slideInterval={5000}
     showBullets
-    lazyLoad
     autoPlay
   />
 )
