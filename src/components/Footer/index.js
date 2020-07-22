@@ -23,7 +23,7 @@ const Footer = ({
     </SocialWrapper>
 
     <SocialWrapper href="https://youtube.com" target="_blank">
-      <SocialIconWrapper background={iconBackgroundColor}>
+      <SocialIconWrapper background={iconBackgroundColor} play>
         <Play fill={backgroundColor} />
       </SocialIconWrapper>
       <SocialText color={iconBackgroundColor}>Youtube</SocialText>

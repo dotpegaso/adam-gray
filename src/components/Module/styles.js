@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
 
@@ -25,6 +25,28 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${media.lessThan('small')`
+    flex-wrap: wrap;
+    align-items: center;
+
+    button {
+      position: absolute;
+      bottom: 30px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .titleWrapper {
+      margin-bottom: 0;
+    }
+  `}
 `
 
 export const Details = styled.div`
@@ -33,9 +55,12 @@ export const Details = styled.div`
   margin-top: 80px;
 
   ${media.lessThan('small')`
-    width: 80%;
+    width: 90%;
     padding: 0;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   `}
 `
 
@@ -48,8 +73,14 @@ export const Description = styled.p`
 
   ${media.lessThan('small')`
     font-size: 16px;
-    margin: 0 0 40px;
+    margin: 0;
   `}
+
+  ${props => props.mobileproduct &&
+    media.lessThan('small')`
+      padding: 20px 22px 0;
+    `
+  }
 `
 
 export const Icon = styled.img`
@@ -57,8 +88,7 @@ export const Icon = styled.img`
   height: 100px;
 
   ${media.lessThan('small')`
-    width: 40%
-    margin: 40px 0;
+    display: none;
   `}
 `
 
@@ -76,13 +106,19 @@ export const Display = styled.div`
   background-color: ${COLORS.MODULE_BACKGROUND};
 
   ${media.lessThan('small')`
-    background-position-y: 300px;
-    background-position-x: -100px;
+    background-position-y: 0;
+    background-position-x: -120px;
+    background-size: 150%;
+    height: 45vh;
+    width: 100%;
+    padding-left: 0;
   `}
-  
-  ${media.lessThan("small")`
-    display: none;
-  `}
+
+  ${props => props.mobileproduct &&
+    media.lessThan('small')`
+      margin-top: 50px;
+    `
+  }
 `
 
 export const DisplayImage = styled.img`

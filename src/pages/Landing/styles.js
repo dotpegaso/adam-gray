@@ -87,6 +87,22 @@ export const FirstLine = styled.p`
   `}
 
   ${animation}
+
+  ::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    background: ${COLORS.SECONDARY_TEXT};
+    right: 0;
+    top: 15px;
+    margin-right: 25%;
+
+    ${media.lessThan("small")`
+      display: none;
+    `}
+  }
 `
 
 export const SecondLine = styled.p`

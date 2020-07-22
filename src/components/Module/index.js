@@ -37,6 +37,8 @@ const Module = ({
   pageUp,
   pageDown,
   showControl,
+  mobileLanding,
+  mobileProduct,
 }) => {
 
   const lottieDefaultOptions = {
@@ -58,7 +60,12 @@ const Module = ({
             title={title}
           />
 
-          <Description descriptionColor={descriptionColor}>{description}</Description>
+          <Description
+            descriptionColor={descriptionColor}
+            mobileproduct={mobileProduct}
+          >
+            {description}
+          </Description>
 
           {icon && <Icon src={icon} alt={title} />}
 
@@ -68,10 +75,15 @@ const Module = ({
             actionColor={actionColor}
             actionText={actionText}
             actionShadowColor={actionShadowColor}
+            mobileLanding={mobileLanding}
+            mobileProduct={mobileProduct}
           />
         </Details>
 
-        <Display style={{ backgroundImage: `url(${displayBackground})` }}>
+        <Display
+          style={{ background: mobileProduct ? actionShadowColor :`url(${displayBackground})` }}
+          mobileproduct={mobileProduct}
+        >
           {displayImage && (
             <DisplayImage
               src={displayImage}

@@ -65,6 +65,7 @@ const Product = ({
         actionShadowColor={actionShadowColor}
         displayBackground={displayBackground}
         displayImage={displayImage}
+        mobileProduct
       />
       
       {carouselImages && <Gallery carouselImages={carouselImages} />}

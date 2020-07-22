@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
 
@@ -31,7 +31,7 @@ export const Title = styled.p`
   }
 
   ${media.lessThan('small')`
-    font-size: 6vw;
+    font-size: 8vw;
   `}
 `
 
@@ -41,9 +41,22 @@ export const Content = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: 100px 0;
+
+  ${media.lessThan('small')`
+    flex-wrap: wrap;
+  `}
+
+  :last-child {
+    flex-flow: column-reverse;
+  }
 `
 export const Wrapper = styled.div`
   width: 30%;
+
+  ${media.lessThan('small')`
+    width: 90%;
+    margin: 0 auto;
+  `}
 `
 
 export const ContentTitle = styled.p`
@@ -51,6 +64,10 @@ export const ContentTitle = styled.p`
   font-size: 18px;
   margin-bottom: 20px;
   color: ${COLORS.INTRMODL_SECONDARY};
+
+  ${media.lessThan('small')`
+    font-size: 6vw;
+  `}
 `
 
 export const ContentDescription = styled.p`
@@ -61,4 +78,9 @@ export const ContentDescription = styled.p`
 export const ContentPreview = styled.img`
   height: ${props => props.small ? '40vh' : '50vh'};
   object-fit: contain;
+
+  ${media.lessThan('small')`
+    width: 90%;
+    ${props => !props.small && `margin-top: 50px;`}
+  `}
 `

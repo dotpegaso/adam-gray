@@ -9,7 +9,7 @@ const Title = ({
   title,
   titleColor,
 }) => (
-  <TitleWrapper style={{ backgroundImage: `url(${titleBackground})` }}>
+  <TitleWrapper className="titleWrapper" style={{ backgroundImage: `url(${titleBackground})` }}>
     <Text titleColor={titleColor}>{title}</Text>
   </TitleWrapper>
 )

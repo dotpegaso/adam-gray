@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import media from 'styled-media-query'
 
 export const Container = styled.div`
@@ -14,7 +14,6 @@ export const Container = styled.div`
 
   ${media.lessThan('small')`
     flex-wrap: wrap;
-    flex-direction: column;
   `}
 `
 
@@ -26,6 +25,7 @@ export const SocialWrapper = styled.a`
 
   ${media.lessThan('small')`
     margin: 20px;
+    justify-content: center;
   `}
 `
 
@@ -34,6 +34,10 @@ export const SocialIconWrapper = styled.div`
   padding: 15px;
   display: flex;
   align-items: center;
+
+  ${props => props.play && `
+    padding: 17.5px 21px;
+  `}
 `
 
 export const SocialText = styled.p`
@@ -42,4 +46,8 @@ export const SocialText = styled.p`
   margin-left: 20px;
   font-weight: 600;
   font-size: 18px;
+
+  ${media.lessThan('small')`
+    display: none;
+  `}
 `

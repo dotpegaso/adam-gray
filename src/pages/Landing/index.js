@@ -66,6 +66,7 @@ const Landing = () => {
               pageUp={() => fullpageApi.moveSectionUp()}
               pageDown={() => fullpageApi.moveSectionDown()}
               showControl
+              mobileLanding
             />
             <Module
               id="bicycle-bolts"
@@ -86,6 +87,7 @@ const Landing = () => {
               pageDown={() => fullpageApi.moveSectionDown()}
               animate
               showControl
+              mobileLanding
             />
             <Module
               id="surf-brain"
@@ -106,6 +108,7 @@ const Landing = () => {
               pageDown={() => fullpageApi.moveSectionDown()}
               animate
               showControl
+              mobileLanding
             />
             <Module
               id="hella-more-funner"
@@ -125,6 +128,7 @@ const Landing = () => {
               pageUp={() => fullpageApi.moveSectionUp()}
               pageDown={() => fullpageApi.moveSectionDown()}
               showControl
+              mobileLanding
             />
             <Module
               id="intrmodl"
@@ -144,6 +148,7 @@ const Landing = () => {
               pageUp={() => fullpageApi.moveSectionUp()}
               animate
               showControl
+              mobileLanding
             />
           </ReactFullpage.Wrapper>
         )}

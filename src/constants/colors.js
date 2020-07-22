@@ -6,6 +6,7 @@ export default {
   ABOUT_PRIMARY: '#253752',
   ABOUT_SECONDARY: '#30F2D4',
   ABOUT_SUPPORT: '#6140FF',
+  DARK_LIGHT: '#F6F7F9',
 
   // hamburger
   DEFAULT_LINE: '#FFF',

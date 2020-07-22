@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Container = styled.section`
   ${media.lessThan('small')`
-    padding-top: 150px;
+    padding-top: 100px;
   `}
 `
 
@@ -15,8 +15,7 @@ export const VideoContainer = styled.div`
   background-color: ${props => props.videoBackground};
 
   ${media.lessThan('small')`
-    height: 50vh;
-    padding: 40px;
+    height: 30vh;
   `}
 `
 
@@ -26,7 +25,8 @@ export const VideoWrapper = styled.div`
   height: 50%;
 
   ${media.lessThan('small')`
-    width: 80%;
+    width: 100%;
+    height: 100%;
   `}
 `
 
@@ -39,9 +39,7 @@ export const VideoText = styled.p`
   left: -70px;
 
   ${media.lessThan('small')`
-    font-size: 7vw;
-    top: -60px;
-    left: -20px;
+    display: none;
   `}
 `
 
@@ -135,13 +133,6 @@ export const ShadowText = styled.p`
     padding: 5px 10%;
     border: 6px solid;
     text-shadow: 3px 3px rgba(255,255,255, .8);
-    
-    ${media.lessThan('small')`
-      width: 60%;
-      font-size: 7vw;
-      text-align: center;
-      text-shadow: 2px 2px rgba(255,255,255, .8);
-    `}
   `)}
 
   ${props => props.bigger && (`
@@ -154,11 +145,20 @@ export const ShadowText = styled.p`
     border 12px solid;
     text-shadow: 10px 10px rgba(255,255,255, .8);
     background-color: ${props.biggerActionInnerBackground};
+  `)}
 
-    ${media.lessThan('small')`
-      font-size: 9vw;
-      width: 65%;
+  ${media.lessThan('small')`
+    ${props => props.bigger && `
+      font-size: 12vw;
+      width: 70%;
       text-shadow: 4px 4px rgba(255,255,255,.8);
     `}
-  `)}
+
+    ${props => props.small && `
+      width: 60%;
+      font-size: 7vw;
+      text-align: center;
+      text-shadow: 2px 2px rgba(255,255,255, .8);
+    `}
+  `}
 `

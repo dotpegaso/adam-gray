@@ -71,3 +71,13 @@ code {
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   object-fit: cover;
 }
+
+@media screen and (max-width: 490px) {
+  .image-gallery {
+    margin-top: 0;
+  }
+
+  .image-gallery-icon {
+    display: none;
+  }
+}

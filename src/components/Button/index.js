@@ -11,8 +11,13 @@ const Button = ({
   actionColor,
   actionText,
   actionShadowColor,
+  mobileLanding,
+  mobileProduct,
 }) => (
-  <CallToActionWrapper>
+  <CallToActionWrapper
+    mobilelanding={mobileLanding}
+    mobileproduct={mobileProduct}
+  >
     <CallToAction
       to={actionLink}
       actionBorderColor={actionBorderColor}
@@ -23,6 +28,8 @@ const Button = ({
     <Shadow
       actionBorderColor={actionBorderColor}
       actionShadowColor={actionShadowColor}
+      mobilelanding={mobileLanding}
+      mobileproduct={mobileProduct}
     />
   </CallToActionWrapper>
 )

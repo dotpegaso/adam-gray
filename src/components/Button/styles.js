@@ -1,6 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+import media from 'styled-media-query'
 import { Link } from 'react-router-dom'
 import COLORS from '../../constants/colors'
+
+
 
 
 export const CallToActionWrapper = styled.div`
@@ -13,6 +16,22 @@ export const CallToActionWrapper = styled.div`
     a {
       transform: translate(-10px, -10px);
     }
+  }
+
+  ${props => props.mobileproduct &&
+    media.lessThan('small')`
+      margin: 0 auto;
+    `
+  }
+  
+  ${props => props.mobilelanding && 
+    media.lessThan('small')`
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    `
   }
 `
 
@@ -45,4 +64,18 @@ export const Shadow = styled.div`
   display: flex;
   justify-content: space-between;
   border: 3px solid ${props => props.actionBorderColor};
+
+  ${props => props.mobilelanding && 
+    media.lessThan('small')`
+      top: 40px;
+      left: 20px;
+    `
+  }
+
+  ${props => props.mobileproduct &&
+    media.lessThan('small')`
+      top: 35px;
+      left: 10px;
+    `
+  }
 `

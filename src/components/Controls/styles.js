@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
 
 const defaultArrow = css`
@@ -27,6 +28,10 @@ export const Container = styled.div`
   padding: 10px 50px;
   background: ${COLORS.LIGHTER};
   box-shadow: 0 0 20px rgba(0,0,0, .1);
+
+  ${media.lessThan("small")`
+    display: none;
+  `}
 `
 
 export const ArrowUp = styled.img`

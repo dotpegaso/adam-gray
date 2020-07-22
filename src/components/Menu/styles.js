@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
+import media from 'styled-media-query'
 import COLORS from '../../constants/colors'
 
 export const Container = styled.section`
@@ -11,6 +12,10 @@ export const Container = styled.section`
   background: ${COLORS.PRIMARY};
   z-index: 99;
   overflow: hidden;
+
+  ${media.lessThan("small")`
+    height: 100%;
+  `}
 `
 
 export const Content = styled.div`
@@ -20,6 +25,14 @@ export const Content = styled.div`
   width: 30%;
   display: flex;
   flex-wrap: wrap;
+
+  ${media.lessThan("small")`
+    padding: 20% 0;
+    padding: 0;
+    align-content: center;
+    height: 80%;
+    width: 80%;
+  `}
 `
 
 export const StyledLink = styled(Link)`
@@ -37,12 +50,21 @@ export const StyledLink = styled(Link)`
   &:hover {
     color: ${COLORS.ABOUT_SECONDARY}
   }
+
+  ${media.lessThan("small")`
+    font-size: 22px;
+    height: fit-content;
+  `}
 `
 
 export const LabelWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 15px 0;
+
+  ${media.lessThan("small")`
+    padding: 10px 0 ;
+  `}
 `
 
 export const Dot = styled.div`
@@ -51,6 +73,10 @@ export const Dot = styled.div`
   background-color: ${COLORS.ABOUT_SECONDARY};
   border-radius: 50%;
   margin-right: 10px;
+
+  ${media.lessThan("small")`
+    display: none;
+  `}  
 `
 
 export const Close = styled.img`
