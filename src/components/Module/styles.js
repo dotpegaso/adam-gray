@@ -112,6 +112,7 @@ export const Display = styled.div`
     height: 45vh;
     width: 100%;
     padding-left: 0;
+    background: ${props => props.actionShadowColor};
   `}
 
   ${props => props.mobileproduct &&

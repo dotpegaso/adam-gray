@@ -81,8 +81,9 @@ const Module = ({
         </Details>
 
         <Display
-          style={{ background: mobileProduct ? actionShadowColor :`url(${displayBackground})` }}
+          style={{ backgroundImage: `url(${displayBackground})` }}
           mobileproduct={mobileProduct}
+          actionShadowColor={actionShadowColor}
         >
           {displayImage && (
             <DisplayImage

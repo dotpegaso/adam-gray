@@ -32,7 +32,7 @@ const ProductHellaSlingShots = () => (
     displayBackground={IMAGES.DISPLAY_BG_HELLA_SLINGSHOTS}
     displayImage={IMAGES.ICON_HELLA_SLINGSHOTS}
     carouselImages={carouselImages}
-    videoUrl="https://www.youtube.com/embed/xAwB9lQnxAY"
+    videoUrl="https://www.youtube.com/embed/oROKsecYuVU"
     productList={productList}
     videoBackground={COLORS.HELLA_SECONDARY}
     videoText="Briefly introduction"
