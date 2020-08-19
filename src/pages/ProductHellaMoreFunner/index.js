@@ -1,16 +1,17 @@
 import React from 'react'
-import _ from 'lodash'
 import {
   Product,
 } from '../../components'
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
-const carouselImages = _(5).times(() => (
-  {
-    original: IMAGES.MOCK_CAROUSEL,
-  }
-))
+const reqSlides = require.context('../../resources/images/hella_more_funner/slideshow', true, /\.(png|jpe?g|svg)$/)
+const reqSlidesResult = reqSlides.keys()
+const slideList = reqSlidesResult.map(path => {
+  return { original: reqSlides(path) }
+})
+
+const carouselImages = slideList
 
 const ProductHellaMoreFunner = () => (
   <Product

@@ -44,11 +44,11 @@ export const Content = styled.div`
 
   ${media.lessThan('small')`
     flex-wrap: wrap;
-  `}
 
-  :last-child {
-    flex-flow: column-reverse;
-  }
+    :last-child {
+      flex-flow: column-reverse;
+    }
+  `}  
 `
 export const Wrapper = styled.div`
   width: 30%;

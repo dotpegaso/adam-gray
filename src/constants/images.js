@@ -30,6 +30,8 @@ export default {
   TITLE_BG_INTRMODL: require('../resources/images/titlebg_intrmodl.svg'),
 
   // module display images
+  DISPLAY_IMG_HELLA_SLINGSHOTS: require('../resources/images/displayimg_hella_slingshots.png'),
+  DISPLAY_IMG_HELLA_MORE_FUNNER: require('../resources/images/displayimg_hella_more_funner.png'),
   DISPLAY_IMG_BICYCLE_BOLTS: require('../resources/images/displayimg_bicycle_bolts.svg'),
   DISPLAY_IMG_SURF_BRAIN: require('../resources/images/displayimg_surf_brain.svg'),
   DISPLAY_IMG_INTRMODL: require('../resources/images/displayimg_intrmodl.svg'),

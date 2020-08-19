@@ -62,9 +62,10 @@ const Landing = () => {
               actionColor={COLORS.HELLA_PRIMARY}
               actionShadowColor={COLORS.SECONDARY}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_SLINGSHOTS}
-              threeModelIcon={currentIndex === 1 && IMAGES.THREE_HELLA_SLINGSHOTS}
+              displayImage={currentIndex === 1 && IMAGES.DISPLAY_IMG_HELLA_SLINGSHOTS}
               pageUp={() => fullpageApi.moveSectionUp()}
               pageDown={() => fullpageApi.moveSectionDown()}
+              animate
               showControl
               mobileLanding
             />
@@ -124,9 +125,10 @@ const Landing = () => {
               actionColor={COLORS.HELLA_FUNNER_SECONDARY}
               actionShadowColor={COLORS.HELLA_FUNNER_SUPPORT}
               displayBackground={IMAGES.DISPLAY_BG_HELLA_MORE_FUNNER}
-              lottieIcon={currentIndex === 4 && IMAGES.LOTTIE_HELLA_MORE_FUNNER}
+              displayImage={currentIndex === 4 && IMAGES.DISPLAY_IMG_HELLA_MORE_FUNNER}
               pageUp={() => fullpageApi.moveSectionUp()}
               pageDown={() => fullpageApi.moveSectionDown()}
+              animate
               showControl
               mobileLanding
             />

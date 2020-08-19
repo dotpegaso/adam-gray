@@ -102,9 +102,9 @@ export const ProductsItem = styled.img`
   height: 12vw;
   margin: 30px 0;
   width: calc(100% / 4);
+  object-fit: contain;
 
   ${media.lessThan('small')`
-    object-fit: contain;
     height: 20vw;
   `}
 `

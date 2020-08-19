@@ -6,14 +6,16 @@ import {
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
+const reqFiles = require.context('../../resources/images/hella_slingshots/products', true, /\.(png|jpe?g|svg)$/)
+const reqResult = reqFiles.keys()
+const productList = reqResult.map(path => {
+  return { image: reqFiles(path) }
+})
+
 const carouselImages = _(5).times(() => (
   {
     original: IMAGES.MOCK_CAROUSEL,
   }
-))
-
-const productList = _(24).times(() => (
-  { image: IMAGES.MOCK_PRODUCT, }
 ))
 
 const ProductHellaSlingShots = () => (
