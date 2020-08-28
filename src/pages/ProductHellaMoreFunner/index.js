@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import {
   Product,
 } from '../../components'
@@ -11,7 +12,17 @@ const slideList = reqSlidesResult.map(path => {
   return { original: reqSlides(path) }
 })
 
-const carouselImages = slideList
+const reqFiles = require.context('../../resources/images/hella_more_funner/products', true, /\.(png|jpe?g|svg)$/)
+const reqResult = reqFiles.keys()
+const productList = reqResult.map(path => {
+  return { image: reqFiles(path) }
+})
+
+const carouselImages = _(5).times(() => (
+  {
+    original: IMAGES.MOCK_CAROUSEL,
+  }
+))
 
 const ProductHellaMoreFunner = () => (
   <Product
@@ -28,7 +39,8 @@ const ProductHellaMoreFunner = () => (
     actionShadowColor={COLORS.HELLA_FUNNER_SUPPORT}
     displayBackground={IMAGES.DISPLAY_BG_HELLA_MORE_FUNNER}
     displayImage={IMAGES.ICON_HELLA_MORE_FUNNER}
-    carouselImages={carouselImages}
+    carouselImages={slideList || carouselImages}
+    productList={productList}
     biggerActionText="GIVE ME A SHOW!!!"
     biggerActionTextColor={COLORS.HELLA_FUNNER_PRIMARY}
     biggerActionBackground={COLORS.HELLA_FUNNER_SECONDARY}

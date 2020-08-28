@@ -6,6 +6,12 @@ import {
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
+const reqSlides = require.context('../../resources/images/bicycle_bolts/slideshow', true, /\.(png|jpe?g|svg)$/)
+const reqSlidesResult = reqSlides.keys()
+const slideList = reqSlidesResult.map(path => {
+  return { original: reqSlides(path) }
+})
+
 const reqFiles = require.context('../../resources/images/hella_slingshots/products', true, /\.(png|jpe?g|svg)$/)
 const reqResult = reqFiles.keys()
 const productList = reqResult.map(path => {
@@ -33,7 +39,7 @@ const ProductHellaSlingShots = () => (
     actionShadowColor={COLORS.SECONDARY}
     displayBackground={IMAGES.DISPLAY_BG_HELLA_SLINGSHOTS}
     displayImage={IMAGES.ICON_HELLA_SLINGSHOTS}
-    carouselImages={carouselImages}
+    carouselImages={slideList || carouselImages}
     videoUrl="https://www.youtube.com/embed/oROKsecYuVU"
     productList={productList}
     videoBackground={COLORS.HELLA_SECONDARY}

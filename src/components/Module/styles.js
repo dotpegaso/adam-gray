@@ -112,12 +112,14 @@ export const Display = styled.div`
     height: 45vh;
     width: 100%;
     padding-left: 0;
-    background: ${props => props.actionShadowColor};
   `}
 
   ${props => props.mobileproduct &&
     media.lessThan('small')`
       margin-top: 50px;
+      background: ${props.actionShadowColor};
+      background-image: none !important;
+      
     `
   }
 `

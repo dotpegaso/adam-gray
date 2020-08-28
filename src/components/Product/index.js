@@ -1,9 +1,12 @@
 import React from 'react'
+import Zoom from 'react-medium-image-zoom'
 import Module from '../Module'
 import Header from '../Header'
 import Gallery from '../Gallery'
 import Footer from '../Footer'
 import ProjectIntrmodl from '../ProjectIntrmodl'
+import 'react-medium-image-zoom/dist/styles.css'
+
 import {
   Container,
   VideoContainer,
@@ -18,6 +21,12 @@ import {
   BiggerCallToAction,
   ShadowText,
 } from './styles'
+
+const zoomStyle = {
+  height: '12vw',
+  margin: '30px 0',
+  width: 'calc(100% / 4)',  
+}
 
 const Product = ({
   title,
@@ -107,7 +116,11 @@ const Product = ({
             Products
           </ProductsTitle>
           <ProductsWrapper>
-            {productList.map( product => <ProductsItem src={product.image} /> )}
+            {productList.map( product => (
+              <Zoom wrapStyle={zoomStyle}>
+                <ProductsItem src={product.image} />
+              </Zoom>
+            ))}
           </ProductsWrapper>
         </ProductsContainer>
       )}

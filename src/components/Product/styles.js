@@ -99,14 +99,9 @@ export const ProductsWrapper = styled.div`
 `
 
 export const ProductsItem = styled.img`
-  height: 12vw;
-  margin: 30px 0;
-  width: calc(100% / 4);
   object-fit: contain;
-
-  ${media.lessThan('small')`
-    height: 20vw;
-  `}
+  width: 100%;
+  height: 100%;
 `
 
 export const BiggerCallToAction = styled.a`

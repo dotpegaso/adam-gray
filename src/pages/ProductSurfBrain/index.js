@@ -6,6 +6,12 @@ import {
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
+const reqSlides = require.context('../../resources/images/bicycle_bolts/slideshow', true, /\.(png|jpe?g|svg)$/)
+const reqSlidesResult = reqSlides.keys()
+const slideList = reqSlidesResult.map(path => {
+  return { original: reqSlides(path) }
+})
+
 const reqFiles = require.context('../../resources/images/surf_brain/products', true, /\.(png|jpe?g|svg)$/)
 const reqResult = reqFiles.keys()
 const productList = reqResult.map(path => {
@@ -33,7 +39,7 @@ const ProductSurfBrain = () => (
     actionShadowColor={COLORS.SURF_SUPPORT}
     displayBackground={IMAGES.DISPLAY_BG_SURF_BRAIN}
     displayImage={IMAGES.ICON_SURF_BRAIN}
-    carouselImages={carouselImages}
+    carouselImages={slideList || carouselImages}
     videoUrl="https://www.youtube.com/embed/xAwB9lQnxAY"
     productList={productList}
     videoBackground={COLORS.SURF_PRIMARY}
