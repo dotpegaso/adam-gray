@@ -57,7 +57,10 @@ export default {
   // threeJS
   THREE_HELLA_SLINGSHOTS: require('../resources/three/hella_slingshots.fbx'),
 
-  // projects preview
+  // projects preview for intrmodl page
   PROJECT_INTRMODL_APP: require('../resources/images/project_intrmodl_app.jpg'),
   PROJECT_INTRMODL_WEB: require('../resources/images/project_intrmodl_web.jpg'),
+  PROJECT_INTRMODL_YARD_MAP: require('../resources/images/project_intrmodl_yardmap.png'),
+  PROJECT_INTRMODL_YARD_LIST: require('../resources/images/project_intrmodl_yardlist.png'),
+  PROJECT_INTRMODL_WORKERS: require('../resources/images/project_intrmodl_workers.png'),
 }

@@ -48,7 +48,7 @@ export const Content = styled.div`
     :last-child {
       flex-flow: column-reverse;
     }
-  `}  
+  `}
 `
 export const Wrapper = styled.div`
   width: 30%;
@@ -76,11 +76,11 @@ export const ContentDescription = styled.p`
 `
 
 export const ContentPreview = styled.img`
-  height: ${props => props.small ? '40vh' : '50vh'};
+  height: ${(props) => (props.small ? '40vh' : '50vh')};
   object-fit: contain;
 
   ${media.lessThan('small')`
     width: 90%;
-    ${props => !props.small && `margin-top: 50px;`}
+    ${(props) => !props.small && `margin-top: 50px;`}
   `}
 `
