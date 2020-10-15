@@ -52,6 +52,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+div.ztb-scb-wrapper{
+  display: none !important;
+  visibility: hidden !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
