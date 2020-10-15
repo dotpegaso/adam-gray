@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  Footer
-} from '../../components'
+import { Footer } from '../../components'
 import {
   Container,
   Wrapper,
@@ -26,7 +24,6 @@ import COLORS from '../../constants/colors'
 const About = () => (
   <Container>
     <Wrapper general>
-
       <Content>
         <Navigation>
           <NavigationIconWrapper to="/">
@@ -39,7 +36,13 @@ const About = () => (
           <Title>OH HEY!</Title>
           <Subtitle>Yeah, so a little about me</Subtitle>
           <Text>
-            I grew up in the woods of Northern California. I’m the middle child of 3 red headed brothers and got my first slingshot when I was 4 years old. We had a hay bale target range in back that we directed a growing arsenal of projectile weapons at. If we weren’t shooting targets and building forts, we were hiking around the hills or swimming in the lake. We had bows, crossbows, bb guns, 22’s and paint ball guns but the slingshot was tops.
+            I grew up in the woods of Northern California. I’m the middle child
+            of 3 red headed brothers and got my first slingshot when I was 4
+            years old. We had a hay bale target range in back that we directed a
+            growing arsenal of projectile weapons at. If we weren’t shooting
+            targets and building forts, we were hiking around the hills or
+            swimming in the lake. We had bows, crossbows, bb guns, 22’s and
+            paint ball guns but the slingshot was tops.
           </Text>
 
           <Wrapper badges>
@@ -51,7 +54,7 @@ const About = () => (
 
           <MailWrapper>
             <MailText>MAIL TO WORK</MailText>
-            <MailLink href="mailto:ok@adam-gray.com" target="_blank">ok@adam-gray.com</MailLink>
+            <MailLink href="#zbwid-9005728d">ok@adam-gray.com</MailLink>
           </MailWrapper>
         </Details>
       </Content>

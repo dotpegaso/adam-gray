@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   CallToAction,
+  CallToActionStore,
   CallToActionWrapper,
   Shadow,
 } from './styles'
@@ -13,18 +14,31 @@ const Button = ({
   actionShadowColor,
   mobileLanding,
   mobileProduct,
+  actionStore,
 }) => (
   <CallToActionWrapper
     mobilelanding={mobileLanding}
     mobileproduct={mobileProduct}
   >
-    <CallToAction
-      to={actionLink}
-      actionBorderColor={actionBorderColor}
-      actionColor={actionColor}
-    >
-      {actionText}
-    </CallToAction>
+    {actionStore ? (
+      <CallToActionStore
+        href={actionLink}
+        target="_blank"
+        actionBorderColor={actionBorderColor}
+        actionColor={actionColor}
+      >
+        {actionText}
+      </CallToActionStore>
+    ) : (
+      <CallToAction
+        to={actionLink}
+        actionBorderColor={actionBorderColor}
+        actionColor={actionColor}
+      >
+        {actionText}
+      </CallToAction>
+    )}
+
     <Shadow
       actionBorderColor={actionBorderColor}
       actionShadowColor={actionShadowColor}

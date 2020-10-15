@@ -1,45 +1,13 @@
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 import media from 'styled-media-query'
 import { Link } from 'react-router-dom'
 import COLORS from '../../constants/colors'
 
-
-
-
-export const CallToActionWrapper = styled.div`
-  position: relative;
-  width: fit-content;
-
-  &:hover {
-    cursor: pointer;
-    
-    a {
-      transform: translate(-10px, -10px);
-    }
-  }
-
-  ${props => props.mobileproduct &&
-    media.lessThan('small')`
-      margin: 0 auto;
-    `
-  }
-  
-  ${props => props.mobilelanding && 
-    media.lessThan('small')`
-      position: absolute;
-      bottom: 30px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    `
-  }
-`
-
-export const CallToAction = styled(Link)`
+const defaultButton = css`
   display: block;
   text-decoration: none;
-  border: 3px solid ${props => props.actionBorderColor};
-  color: ${props => props.actionColor};
+  border: 3px solid ${(props) => props.actionBorderColor};
+  color: ${(props) => props.actionColor};
   margin-top: 25px;
   background: ${COLORS.LIGHTER};
   padding: 10px 30px;
@@ -49,13 +17,51 @@ export const CallToAction = styled(Link)`
   height: 25px;
   z-index: 2;
   position: relative;
-  transition: .2s all;
+  transition: 0.2s all;
   text-align: center;
+`
+
+export const CallToActionWrapper = styled.div`
+  position: relative;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+
+    a {
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  ${(props) =>
+    props.mobileproduct &&
+    media.lessThan('small')`
+      margin: 0 auto;
+    `}
+
+  ${(props) =>
+    props.mobilelanding &&
+    media.lessThan('small')`
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    `}
+`
+
+export const CallToAction = styled(Link)`
+  ${defaultButton}
+`
+
+export const CallToActionStore = styled.a`
+  text-decoration: none;
+  ${defaultButton}
 `
 
 export const Shadow = styled.div`
   position: absolute;
-  background: ${props => props.actionShadowColor};
+  background: ${(props) => props.actionShadowColor};
   width: calc(200px - 6px);
   height: calc(50px - 6px);
   top: 0;
@@ -63,19 +69,19 @@ export const Shadow = styled.div`
   pointer-events: none;
   display: flex;
   justify-content: space-between;
-  border: 3px solid ${props => props.actionBorderColor};
+  border: 3px solid ${(props) => props.actionBorderColor};
 
-  ${props => props.mobilelanding && 
+  ${(props) =>
+    props.mobilelanding &&
     media.lessThan('small')`
       top: 40px;
       left: 20px;
-    `
-  }
+    `}
 
-  ${props => props.mobileproduct &&
+  ${(props) =>
+    props.mobileproduct &&
     media.lessThan('small')`
       top: 35px;
       left: 10px;
-    `
-  }
+    `}
 `

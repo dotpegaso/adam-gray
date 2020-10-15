@@ -25,7 +25,7 @@ import {
 const zoomStyle = {
   height: '12vw',
   margin: '30px 0',
-  width: 'calc(100% / 4)',  
+  width: 'calc(100% / 4)',
 }
 
 const Product = ({
@@ -57,6 +57,8 @@ const Product = ({
   hasProject,
   footerIconBackground,
   footerBackground,
+  youtubeChannel,
+  actionStore,
 }) => (
   <>
     <Header active />
@@ -74,12 +76,13 @@ const Product = ({
         actionShadowColor={actionShadowColor}
         displayBackground={displayBackground}
         displayImage={displayImage}
+        actionStore={actionStore}
         mobileProduct
       />
-      
+
       {carouselImages && <Gallery carouselImages={carouselImages} />}
 
-      {hasProject && <ProjectIntrmodl /> }
+      {hasProject && <ProjectIntrmodl />}
 
       {videoUrl && (
         <VideoContainer videoBackground={videoBackground}>
@@ -91,7 +94,7 @@ const Product = ({
                 height="100%"
                 width="100%"
                 frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 title={title}
               />
             </Embed>
@@ -100,7 +103,11 @@ const Product = ({
       )}
 
       {smallActionText && (
-        <SmallCallToAction smallActionBackground={smallActionBackground}>
+        <SmallCallToAction
+          smallActionBackground={smallActionBackground}
+          href={actionStore && actionLink}
+          target="_blank"
+        >
           <ShadowText smallActionTextColor={smallActionTextColor} small>
             {smallActionText}
           </ShadowText>
@@ -109,14 +116,11 @@ const Product = ({
 
       {productList && (
         <ProductsContainer>
-          <ProductsTitle
-            color={titleColor}
-            backgroundColor={actionShadowColor}
-          >
+          <ProductsTitle color={titleColor} backgroundColor={actionShadowColor}>
             Products
           </ProductsTitle>
           <ProductsWrapper>
-            {productList.map( product => (
+            {productList.map((product) => (
               <Zoom wrapStyle={zoomStyle}>
                 <ProductsItem src={product.image} />
               </Zoom>
@@ -128,6 +132,8 @@ const Product = ({
       <BiggerCallToAction
         biggerActionBackground={biggerActionBackground}
         biggerActionBackgroundImage={biggerActionBackgroundImage}
+        href={actionStore && actionLink}
+        target="_blank"
       >
         <ShadowText
           biggerActionTextColor={biggerActionTextColor}
@@ -141,6 +147,7 @@ const Product = ({
       <Footer
         backgroundColor={footerIconBackground}
         iconBackgroundColor={footerBackground}
+        youtubeChannel={youtubeChannel}
       />
     </Container>
   </>

@@ -13,23 +13,27 @@ const Footer = ({
   backgroundColor,
   iconBackgroundColor,
   noPadding,
+  youtubeChannel,
 }) => (
   <Container background={backgroundColor} nopadding={noPadding}>
-    <SocialWrapper href="https://instagram.com" target="_blank">
+    <SocialWrapper
+      href="https://www.instagram.com/ok_adam_gray"
+      target="_blank"
+    >
       <SocialIconWrapper background={iconBackgroundColor}>
         <Instagram fill={backgroundColor} />
       </SocialIconWrapper>
       <SocialText color={iconBackgroundColor}>Instagram</SocialText>
     </SocialWrapper>
-
-    <SocialWrapper href="https://youtube.com" target="_blank">
-      <SocialIconWrapper background={iconBackgroundColor} play>
-        <Play fill={backgroundColor} />
-      </SocialIconWrapper>
-      <SocialText color={iconBackgroundColor}>Youtube</SocialText>
-    </SocialWrapper>
-
-    <SocialWrapper href="mailto:ok@adam-gray.com" target="_blank">
+    {youtubeChannel && (
+      <SocialWrapper href={youtubeChannel} target="_blank">
+        <SocialIconWrapper background={iconBackgroundColor} play>
+          <Play fill={backgroundColor} />
+        </SocialIconWrapper>
+        <SocialText color={iconBackgroundColor}>Youtube</SocialText>
+      </SocialWrapper>
+    )}
+    <SocialWrapper href="#zbwid-9005728d">
       <SocialIconWrapper background={iconBackgroundColor}>
         <Email fill={backgroundColor} />
       </SocialIconWrapper>

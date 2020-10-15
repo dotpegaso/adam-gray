@@ -8,15 +8,15 @@ export const Container = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  background: ${props => props.active ? '#FFF' : COLORS.PRIMARY};
+  background: ${(props) => (props.active ? '#FFF' : COLORS.PRIMARY)};
   padding: 5px 40px;
   height: 80px;
   justify-content: space-between;
   z-index: 9;
-  transition: .2s all;
-  ${props => props.active && `box-shadow: 0 1px 15px rgba(0,0,0, .1);`}
+  transition: 0.2s all;
+  ${(props) => props.active && `box-shadow: 0 1px 15px rgba(0,0,0, .1);`}
 
-  ${media.lessThan("small")`
+  ${media.lessThan('small')`
     padding: 0 15px;
     width: calc(100% - 30px);
   `}
@@ -41,9 +41,10 @@ export const SocialIcon = styled.img`
   height: 35px;
   width: 45px;
   margin-right: 30px;
+  margin-top: 5px;
   object-fit: contain;
 
-  ${media.lessThan("small")`
+  ${media.lessThan('small')`
     background: ${COLORS.DARK_LIGHT};
     padding: 10px;
     height: 20px;
@@ -54,7 +55,7 @@ export const SocialIcon = styled.img`
 export const BackToHome = styled(Link)`
   height: 95%;
 
-  ${media.lessThan("small")`
+  ${media.lessThan('small')`
     height: 80%;
   `}
 `
@@ -70,4 +71,3 @@ export const MenuIcon = styled.img`
     cursor: pointer;
   }
 `
-

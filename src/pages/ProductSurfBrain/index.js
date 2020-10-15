@@ -1,28 +1,32 @@
 import React from 'react'
 import _ from 'lodash'
-import {
-  Product,
-} from '../../components'
+import { Product } from '../../components'
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
-const reqSlides = require.context('../../resources/images/bicycle_bolts/slideshow', true, /\.(png|jpe?g|svg)$/)
+const reqSlides = require.context(
+  '../../resources/images/bicycle_bolts/slideshow',
+  true,
+  /\.(png|jpe?g|svg)$/
+)
 const reqSlidesResult = reqSlides.keys()
-const slideList = reqSlidesResult.map(path => {
+const slideList = reqSlidesResult.map((path) => {
   return { original: reqSlides(path) }
 })
 
-const reqFiles = require.context('../../resources/images/surf_brain/products', true, /\.(png|jpe?g|svg)$/)
+const reqFiles = require.context(
+  '../../resources/images/surf_brain/products',
+  true,
+  /\.(png|jpe?g|svg)$/
+)
 const reqResult = reqFiles.keys()
-const productList = reqResult.map(path => {
+const productList = reqResult.map((path) => {
   return { image: reqFiles(path) }
 })
 
-const carouselImages = _(5).times(() => (
-  {
-    original: IMAGES.MOCK_CAROUSEL,
-  }
-))
+const carouselImages = _(5).times(() => ({
+  original: IMAGES.MOCK_CAROUSEL,
+}))
 
 const ProductSurfBrain = () => (
   <Product
@@ -33,7 +37,7 @@ const ProductSurfBrain = () => (
     descriptionColor={COLORS.SURF_PRIMARY}
     icon={IMAGES.ICON_SURF_BRAIN}
     actionText="SEE PROJECT"
-    actionLink="/surf-brain"
+    actionLink="https://surf-brain.com"
     actionBorderColor={COLORS.SURF_PRIMARY}
     actionColor={COLORS.SURF_SECONDARY}
     actionShadowColor={COLORS.SURF_SUPPORT}
@@ -54,6 +58,7 @@ const ProductSurfBrain = () => (
     biggerActionBackgroundImage={IMAGES.PRODUCT_BG_SURF_BRAIN}
     footerBackground={COLORS.SURF_PRIMARY}
     footerIconBackground={COLORS.SURF_SECONDARY}
+    actionStore
   />
 )
 

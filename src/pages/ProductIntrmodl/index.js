@@ -1,13 +1,15 @@
 import React from 'react'
-import {
-  Product,
-} from '../../components'
+import { Product } from '../../components'
 import IMAGES from '../../constants/images'
 import COLORS from '../../constants/colors'
 
-const reqSlides = require.context('../../resources/images/intrmodl/slideshow', true, /\.(png|jpe?g|svg)$/)
+const reqSlides = require.context(
+  '../../resources/images/intrmodl/slideshow',
+  true,
+  /\.(png|jpe?g|svg)$/
+)
 const reqSlidesResult = reqSlides.keys()
-const slideList = reqSlidesResult.map(path => {
+const slideList = reqSlidesResult.map((path) => {
   return { original: reqSlides(path) }
 })
 
@@ -18,11 +20,9 @@ const ProductIntrmodl = () => (
     title="INTRMODL"
     titleBackground={IMAGES.TITLE_BG_INTRMODL}
     titleColor={COLORS.INTRMODL_PRIMARY}
-    description="Mission: We make metric security bolts. Our intended use and mission is to help keep components on your bicycle safe from opportunistic thievery. Simply replace the existing Allen bolts with our security bolts.   Each set comes with an L- key. The use of these bolts will drastically reduce the chances of a thief making off with your saddle, seatpost, stem, handlebars, wheels and other."
+    description="Mission: We developed both a web app and an Android app as an IoT solution mounted in Rail Management Services vehicles and we calculate historical data to better visualize actionable-items for yard managers and upper managers. This project is currently in a few yards, with plans to operate as many as 50 yards in 2021, allowing RMS to better choreograph thousands of workers each day!"
     descriptionColor={COLORS.INTRMODL_PRIMARY}
     icon={IMAGES.ICON_INTRMODL}
-    actionText="SEE INTERFACE"
-    actionLink="/intrmodl"
     actionBorderColor={COLORS.INTRMODL_PRIMARY}
     actionColor={COLORS.INTRMODL_PRIMARY}
     actionShadowColor={COLORS.INTRMODL_SECONDARY}

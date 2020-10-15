@@ -26,8 +26,16 @@ const Header = ({ active }) => {
         <Wrapper>
           {active && (
             <>
-              <SocialIcon src={IMAGES.INSTRAGRAM} />
-              <SocialIcon src={IMAGES.EMAIL} />
+              <a
+                href="https://instagram.com/ok_adam_gray"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SocialIcon src={IMAGES.INSTRAGRAM} />
+              </a>
+              <a href="#zbwid-9005728d">
+                <SocialIcon src={IMAGES.EMAIL} />
+              </a>
             </>
           )}
           <MenuIcon

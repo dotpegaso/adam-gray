@@ -1,5 +1,5 @@
 import React from 'react'
-import Lottie from "react-lottie"
+import Lottie from 'react-lottie'
 import Button from '../Button'
 import Title from '../Title'
 import ThreeModel from '../ThreeModel'
@@ -39,20 +39,19 @@ const Module = ({
   showControl,
   mobileLanding,
   mobileProduct,
+  actionStore,
 }) => {
-
   const lottieDefaultOptions = {
     autoplay: true,
     animationData: lottieIcon,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    }
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   }
 
   return (
     <Container id={id} className="section">
       <Content>
-
         <Details>
           <Title
             titleBackground={titleBackground}
@@ -69,15 +68,18 @@ const Module = ({
 
           {icon && <Icon src={icon} alt={title} />}
 
-          <Button
-            actionLink={actionLink}
-            actionBorderColor={actionBorderColor}
-            actionColor={actionColor}
-            actionText={actionText}
-            actionShadowColor={actionShadowColor}
-            mobileLanding={mobileLanding}
-            mobileProduct={mobileProduct}
-          />
+          {actionText && (
+            <Button
+              actionLink={actionLink}
+              actionBorderColor={actionBorderColor}
+              actionColor={actionColor}
+              actionText={actionText}
+              actionShadowColor={actionShadowColor}
+              mobileLanding={mobileLanding}
+              mobileProduct={mobileProduct}
+              actionStore={actionStore}
+            />
+          )}
         </Details>
 
         <Display
@@ -86,11 +88,7 @@ const Module = ({
           actionShadowColor={actionShadowColor}
         >
           {displayImage && (
-            <DisplayImage
-              src={displayImage}
-              alt="display"
-              animate={animate}
-            />
+            <DisplayImage src={displayImage} alt="display" animate={animate} />
           )}
           {lottieIcon && (
             <LottieWrapper>
@@ -108,7 +106,6 @@ const Module = ({
             </ThreeJSWrapper>
           )}
         </Display>
-
       </Content>
       {showControl && <Controls pageUp={pageUp} pageDown={pageDown} />}
     </Container>

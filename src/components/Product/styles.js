@@ -12,7 +12,7 @@ export const VideoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.videoBackground};
+  background-color: ${(props) => props.videoBackground};
 
   ${media.lessThan('small')`
     height: 30vh;
@@ -31,7 +31,7 @@ export const VideoWrapper = styled.div`
 `
 
 export const VideoText = styled.p`
-  color: ${props => props.videoTextColor};
+  color: ${(props) => props.videoTextColor};
   position: absolute;
   font-size: 5vw;
   top: -145px;
@@ -53,9 +53,10 @@ export const Embed = styled.div`
 export const SmallCallToAction = styled.a`
   text-decoration: none;
   display: block;
+  cursor: pointer;
   width: 100%;
   padding: 20px 0;
-  background-color: ${props => props.smallActionBackground};
+  background-color: ${(props) => props.smallActionBackground};
 `
 
 export const ProductsContainer = styled.div`
@@ -68,7 +69,7 @@ export const ProductsContainer = styled.div`
 
 export const ProductsTitle = styled.p`
   font-size: 3vw;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   margin: 30px 0 30px 30px;
   position: relative;
   width: fit-content;
@@ -80,7 +81,7 @@ export const ProductsTitle = styled.p`
     height: 50%;
     display: block;
     width: 85%;
-    background: ${props => props.backgroundColor};
+    background: ${(props) => props.backgroundColor};
     z-index: -1;
     left: -10px;
   }
@@ -88,7 +89,6 @@ export const ProductsTitle = styled.p`
   ${media.lessThan('small')`
     font-size: 6vw;
   `}
-
 `
 
 export const ProductsWrapper = styled.div`
@@ -109,8 +109,8 @@ export const BiggerCallToAction = styled.a`
   display: block;
   width: 100%;
   padding: 40px 0;
-  background-color: ${props => props.biggerActionBackground};
-  background-image: url(${props => props.biggerActionBackgroundImage});
+  background-color: ${(props) => props.biggerActionBackground};
+  background-image: url(${(props) => props.biggerActionBackgroundImage});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -122,15 +122,19 @@ export const ShadowText = styled.p`
   margin: 0 auto;
   font-weight: 400;
   
-  ${props => props.small && (`
+  ${(props) =>
+    props.small &&
+    `
     color: ${props.smallActionTextColor};
     font-size: 32px;
     padding: 5px 10%;
     border: 6px solid;
     text-shadow: 3px 3px rgba(255,255,255, .8);
-  `)}
+  `}
 
-  ${props => props.bigger && (`
+  ${(props) =>
+    props.bigger &&
+    `
     color: ${props.biggerActionTextColor};
     font-size: 7vw;
     width: 40%;
@@ -140,16 +144,20 @@ export const ShadowText = styled.p`
     border 12px solid;
     text-shadow: 10px 10px rgba(255,255,255, .8);
     background-color: ${props.biggerActionInnerBackground};
-  `)}
+  `}
 
   ${media.lessThan('small')`
-    ${props => props.bigger && `
+    ${(props) =>
+      props.bigger &&
+      `
       font-size: 12vw;
       width: 70%;
       text-shadow: 4px 4px rgba(255,255,255,.8);
     `}
 
-    ${props => props.small && `
+    ${(props) =>
+      props.small &&
+      `
       width: 60%;
       font-size: 7vw;
       text-align: center;
